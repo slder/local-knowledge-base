@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Knowledge base",
+    "description": "A local RAG knowledge base: drag documents in, choose per-file vector retrieval, and ask the agent to answer with citations."
+  }
+}

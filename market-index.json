@@ -1,0 +1,83 @@
+{
+  "format": 1,
+  "title": "Local knowledge base",
+  "description": "Local-first RAG knowledge base for DeepSeek Harness.",
+  "metadata": {
+    "categories": {
+      "data-knowledge": {
+        "title": {
+          "en": "Data & knowledge",
+          "zh": "数据与知识"
+        }
+      }
+    },
+    "labels": {
+      "rag": {
+        "title": {
+          "en": "RAG",
+          "zh": "检索增强"
+        }
+      },
+      "local-first": {
+        "title": {
+          "en": "Local-first",
+          "zh": "本地优先"
+        }
+      },
+      "pdf": {
+        "title": {
+          "en": "PDF",
+          "zh": "PDF"
+        }
+      }
+    }
+  },
+  "plugins": [
+    {
+      "name": "local-knowledge-base",
+      "title": {
+        "en": "Local knowledge base",
+        "zh": "本地知识库"
+      },
+      "description": {
+        "en": "Local RAG knowledge base with drag-and-drop import, per-file vector retrieval, PDF extraction, and a Q&A agent mode.",
+        "zh": "本地 RAG 知识库：拖拽导入、文件级向量检索、PDF 解析，以及知识库问答智能体模式。"
+      },
+      "icon": "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCIgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByb2xlPSJpbWciIGFyaWEtbGFiZWw9Iktub3dsZWRnZSBiYXNlIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ia2ItYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjMWQ2ZmYyIi8+CiAgICAgIDxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzBkM2ZhOCIvPgogICAgPC9saW5lYXJHcmFkaWVudD4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0ia2ItcGFnZSIgeDE9IjAiIHkxPSIwIiB4Mj0iMCIgeTI9IjEiPgogICAgICA8c3RvcCBvZmZzZXQ9IjAiIHN0b3AtY29sb3I9IiNmZmZmZmYiLz4KICAgICAgPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjZGJlOGZmIi8+CiAgICA8L2xpbmVhckdyYWRpZW50PgogIDwvZGVmcz4KICA8cmVjdCB3aWR0aD0iNjQiIGhlaWdodD0iNjQiIHJ4PSIxNCIgZmlsbD0idXJsKCNrYi1iZykiLz4KICA8cGF0aCBkPSJNMTcgMTYuNUE0LjUgNC41IDAgMCAxIDIxLjUgMTJINDZ2MzNIMjEuNUE0LjUgNC41IDAgMCAwIDE3IDQ5LjV6IiBmaWxsPSJ1cmwoI2tiLXBhZ2UpIi8+CiAgPHBhdGggZD0iTTE3IDQ5LjVBNC41IDQuNSAwIDAgMSAyMS41IDQ1SDQ2IiBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS13aWR0aD0iMy4yIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8cGF0aCBkPSJNMjUgMjFoMTRNMjUgMjdoMTAiIHN0cm9rZT0iIzFkNmZmMiIgc3Ryb2tlLXdpZHRoPSIyLjYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxjaXJjbGUgY3g9IjQwIiBjeT0iNDAiIHI9IjguNSIgZmlsbD0iIzBkM2ZhOCIgc3Ryb2tlPSIjZmZmZmZmIiBzdHJva2Utd2lkdGg9IjIuNiIvPgogIDxwYXRoIGQ9Ik00NiA0Nmw2IDYiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIzIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KICA8Y2lyY2xlIGN4PSI0MCIgY3k9IjQwIiByPSIzLjIiIGZpbGw9IiM3ZmIyZmYiLz4KPC9zdmc+Cg==",
+      "author": "local-knowledge-base contributors",
+      "homepage": "https://github.com/slder/local-knowledge-base",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/slder/local-knowledge-base"
+      },
+      "category": "data-knowledge",
+      "labels": [
+        "rag",
+        "local-first",
+        "pdf"
+      ],
+      "metadata": {
+        "keywords": [
+          "dsh-plugin",
+          "deepseek-harness",
+          "knowledge-base",
+          "rag",
+          "pdf",
+          "local-first"
+        ]
+      },
+      "engines": {
+        "dsh": ">=0.2.0"
+      },
+      "versions": [
+        {
+          "version": "1.0.2",
+          "publishTimestamp": 1794336000,
+          "source": {
+            "type": "npm"
+          }
+        }
+      ]
+    }
+  ]
+}

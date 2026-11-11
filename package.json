@@ -1,0 +1,73 @@
+{
+  "name": "local-knowledge-base",
+  "version": "1.0.2",
+  "description": "Local RAG knowledge base for DeepSeek Harness: drag in documents, enable per-file vector retrieval, preview PDFs/Markdown, and answer with citations.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "knowledge-base",
+    "rag",
+    "pdf",
+    "local-first"
+  ],
+  "license": "MIT",
+  "author": "local-knowledge-base contributors",
+  "type": "module",
+  "homepage": "https://github.com/slder/local-knowledge-base#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slder/local-knowledge-base.git"
+  },
+  "bugs": {
+    "url": "https://github.com/slder/local-knowledge-base/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "LICENSE",
+    "market-index.json"
+  ],
+  "dependencies": {
+    "pdfjs-dist": "^4.10.38"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-layout"
+      ]
+    },
+    "catalog": {
+      "category": "tool",
+      "summary": {
+        "en": "A local-first RAG knowledge base: drop documents into a folder, toggle per-file vector retrieval, preview PDFs and Markdown, and have the agent answer with cited line ranges.",
+        "zh": "本地优先的 RAG 知识库：把文档放进目录，按文件开关向量检索，预览 PDF 与 Markdown，并让智能体带行号引用地回答。"
+      },
+      "capabilities": [
+        "local-first",
+        "rag",
+        "pdf",
+        "citations",
+        "agent-preset"
+      ]
+    }
+  }
+}

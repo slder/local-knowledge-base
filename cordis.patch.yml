@@ -1,0 +1,45 @@
+# local-knowledge-base: the knowledge-base Host/Client plugin plus the
+# "知识库问答" Agent Preset, installed as one bundle.
+- insert:
+    - id: knowledge-base
+      name: 'local-knowledge-base'
+    - id: preset-knowledge-qa
+      name: '@deepseek-ai/dsh-agent-preset'
+      config:
+        id: knowledge-qa
+        name: 知识库问答
+        description: 只基于本地知识库文档回答，自动检索并引用原文。
+        order: 5
+        plugins:
+          - id: persona
+            name: '@deepseek-ai/dsh-persona'
+            config:
+              prefix: |
+                You are a local knowledge-base Q&A assistant. Answer in the user's language.
+
+                The only source of truth is the local knowledge base exposed by the `knowledge_base` tool. The tool reports the active directory; do not ask the user to drag or import the same files again. On the first question where the available documents are unknown, call `knowledge_base` with action `list`. For every question that could be answered by documents, call `knowledge_base` with action `search` before answering, then `read` the best matching relative paths.
+
+                Files marked RAG use local vector retrieval; other files use keyword retrieval. Never answer factual questions about the library from memory. If search finds no relevant passage, say that the knowledge base has no matching document. Cite every claim as `path:startLine-endLine`.
+
+                Do not add, edit, delete, or move knowledge-base files unless the user explicitly requests it. Do not use web search for library questions unless the user explicitly asks for external information.
+          - id: time-context
+            name: '@deepseek-ai/dsh-time-context'
+          - id: tool-ask-user
+            name: '@deepseek-ai/dsh-tool-ask-user'
+          - id: compaction
+            name: cordis:group
+            group: true
+            isolate:
+              compaction: true
+              toolResultPruner: true
+            config:
+              - id: compaction-basic
+                name: '@deepseek-ai/dsh-compaction-basic'
+              - id: command-compact
+                name: '@deepseek-ai/dsh-command-compact'
+              - id: tool-result-pruner
+                name: '@deepseek-ai/dsh-compaction-tool-result-pruner'
+                config:
+                  thresholdChars: 8192
+                  headChars: 4096
+                  tailChars: 1024
