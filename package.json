@@ -1,6 +1,6 @@
 {
   "name": "local-knowledge-base",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Local RAG knowledge base for DeepSeek Harness: drag in documents, enable per-file vector retrieval, preview PDFs/Markdown, and answer with citations.",
   "keywords": [
     "dsh",
@@ -71,3 +71,4 @@
     }
   }
 }
+

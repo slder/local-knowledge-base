@@ -34,7 +34,7 @@ install_bundle target: local-knowledge-base
 ### Pin a version
 
 ```sh
-dsh plugin --profile web add local-knowledge-base@1.0.2
+dsh plugin --profile web add local-knowledge-base@1.0.4
 ```
 
 The explicit pin matters: pnpm holds back very recent releases, so a bare `add` can resolve to an older version.
@@ -44,11 +44,11 @@ The explicit pin matters: pnpm holds back very recent releases, so a bare `add` 
 The package ships a format-1 market index. Add one of these URLs under **Plugins → Discover → Manage index sources**:
 
 ```text
-https://unpkg.com/local-knowledge-base@1.0.2/market-index.json
+https://unpkg.com/local-knowledge-base@1.0.4/market-index.json
 ```
 
 ```text
-https://cdn.jsdelivr.net/npm/local-knowledge-base@1.0.2/market-index.json
+https://cdn.jsdelivr.net/npm/local-knowledge-base@1.0.4/market-index.json
 ```
 
 The bundle installs two rows:
@@ -155,3 +155,4 @@ dsh plugin --profile web add link:/absolute/path/to/local-knowledge-base
 ## License
 
 MIT — see [LICENSE](LICENSE). `pdfjs-dist` is distributed under the Apache-2.0 license; see its package for details.
+
